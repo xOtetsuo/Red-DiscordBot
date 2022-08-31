@@ -42,16 +42,16 @@ class SMReel(Enum):
 _ = lambda s: s
 PAYOUTS = {
     (SMReel.two, SMReel.two, SMReel.six): {
-        "payout": lambda x: x * 50,
-        "phrase": _("JACKPOT! 226! Your bid has been multiplied * 50!"),
+        "payout": lambda x: x * 69,
+        "phrase": _("hollysmokes! 226! Your bid has been multiplied * 69!"),
     },
     (SMReel.flc, SMReel.flc, SMReel.flc): {
-        "payout": lambda x: x * 25,
-        "phrase": _("4LC! Your bid has been multiplied * 25!"),
+        "payout": lambda x: x * 420,
+        "phrase": _("4LC! Your bid has been multiplied * 420!"),
     },
     (SMReel.cherries, SMReel.cherries, SMReel.cherries): {
-        "payout": lambda x: x * 20,
-        "phrase": _("Three cherries! Your bid has been multiplied * 20!"),
+        "payout": lambda x: x * 666,
+        "phrase": _("Three cherries! Your bid has been multiplied * 666!"),
     },
     (SMReel.two, SMReel.six): {
         "payout": lambda x: x * 4,
@@ -59,23 +59,23 @@ PAYOUTS = {
     },
     (SMReel.cherries, SMReel.cherries): {
         "payout": lambda x: x * 3,
-        "phrase": _("Two cherries! Your bid has been multiplied * 3!"),
+        "phrase": _("Two cherries! no mammies!!Your bid has been multiplied * 3!"),
     },
     "3 symbols": {
         "payout": lambda x: x * 10,
-        "phrase": _("Three symbols! Your bid has been multiplied * 10!"),
+        "phrase": _("Three symbols! dope as F! ur payout  has been multiplied * 10!"),
     },
     "2 symbols": {
         "payout": lambda x: x * 2,
-        "phrase": _("Two consecutive symbols! Your bid has been multiplied * 2!"),
+        "phrase": _("Two consecutive symbols! freaking sick ur bid has been multiplied * 2!"),
     },
 }
 
 SLOT_PAYOUTS_MSG = _(
     "Slot machine payouts:\n"
-    "{two.value} {two.value} {six.value} Bet * 50\n"
-    "{flc.value} {flc.value} {flc.value} Bet * 25\n"
-    "{cherries.value} {cherries.value} {cherries.value} Bet * 20\n"
+    "{two.value} {two.value} {six.value} Bet * 69\n"
+    "{flc.value} {flc.value} {flc.value} Bet * 420\n"
+    "{cherries.value} {cherries.value} {cherries.value} Bet * 666\n"
     "{two.value} {six.value} Bet * 4\n"
     "{cherries.value} {cherries.value} Bet * 3\n\n"
     "Three symbols: Bet * 10\n"
@@ -131,9 +131,9 @@ class Economy(commands.Cog):
 
     default_guild_settings = {
         "PAYDAY_TIME": 300,
-        "PAYDAY_CREDITS": 120,
+        "PAYDAY_CREDITS": 500,
         "SLOT_MIN": 5,
-        "SLOT_MAX": 100,
+        "SLOT_MAX": 100000,
         "SLOT_TIME": 5,
         "REGISTER_CREDITS": 0,
     }
@@ -328,8 +328,8 @@ class Economy(commands.Cog):
                 pos = await bank.get_leaderboard_position(author)
                 await ctx.send(
                     _(
-                        "{author.mention} Here, take some {currency}. "
-                        "Enjoy! (+{amount} {currency}!)\n\n"
+                        "{author.mention} here some {currency}. "
+                        "dont smoke it all up! (+{amount} {currency}!)\n\n"
                         "You currently have {new_balance} {currency}.\n\n"
                         "You are currently #{pos} on the global leaderboard!"
                     ).format(
@@ -384,8 +384,8 @@ class Economy(commands.Cog):
                 pos = await bank.get_leaderboard_position(author)
                 await ctx.send(
                     _(
-                        "{author.mention} Here, take some {currency}. "
-                        "Enjoy! (+{amount} {currency}!)\n\n"
+                        "{author.mention} here some {currency}. "
+                        "dont smoke it all up! (+{amount} {currency}!)\n\n"
                         "You currently have {new_balance} {currency}.\n\n"
                         "You are currently #{pos} on the global leaderboard!"
                     ).format(
